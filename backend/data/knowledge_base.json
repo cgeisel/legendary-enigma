@@ -1,0 +1,18 @@
+[
+    {
+        "question": "How do I create a Shadowdark RPG character?",
+        "answer": "To create a character, roll 3d6 for each ability score, select a class, and choose starting equipment."
+    },
+    {
+        "question": "What are the core mechanics of Shadowdark RPG?",
+        "answer": "Shadowdark uses a d20 system where players roll 1d20 and add modifiers to meet or exceed a target number."
+    },
+    {
+        "question": "What is the maximum level a character can reach?",
+        "answer": "The maximum level in Shadowdark RPG is level 10."
+    },
+    {
+        "question": "How does combat work in Shadowdark RPG?",
+        "answer": "Combat uses initiative rolls, actions per turn, and attack rolls against the opponent's armor class (AC)."
+    }
+]
