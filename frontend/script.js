@@ -22,15 +22,22 @@ document.getElementById('askButton').addEventListener('click', async () => {
 
         if (response.ok) {
             const data = await response.json();
+
+            // Display the generated answer
+            if (data.generated_answer) {
+                responseDiv.innerHTML += `<div><strong>Generated Answer:</strong> ${data.generated_answer}</div><hr>`;
+            }
+
+            // Display the matching answers
             if (data.answers && data.answers.length > 0) {
-                responseDiv.innerHTML = data.answers
+                responseDiv.innerHTML += data.answers
                     .map(
                         (answer) =>
                             `<div><strong>Q:</strong> ${answer.question}<br><strong>A:</strong> ${answer.answer}</div>`
                     )
                     .join('<hr>');
             } else {
-                responseDiv.innerHTML = '<p>No relevant answers found.</p>';
+                responseDiv.innerHTML += '<p>No relevant answers found.</p>';
             }
         } else {
             const errorData = await response.json();
